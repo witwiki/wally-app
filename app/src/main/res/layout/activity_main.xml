@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_xmargin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_xmargin"
+    android:background="@color/colorWally"
+    android:orientation="vertical"
+    tools:context="com.example.blockwallie.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/btcContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_vertical_xmargin"
+        android:paddingBottom="@dimen/activity_vertical_xmargin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btcSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22pt"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@android:color/holo_orange_dark"
+            android:text="BTC" />
+
+        <TextView
+            android:id="@+id/btcValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20pt"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="BTC Value" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fiatContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/activity_vertical_xmargin"
+        android:paddingBottom="@dimen/activity_vertical_xmargin">
+
+        <TextView
+            android:id="@+id/fiatSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22pt"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@android:color/holo_orange_dark"
+            android:text="FIAT"/>
+
+        <TextView
+            android:id="@+id/fiatValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20pt"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="FIAT Value"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <Button
+            android:id="@+id/btcSend"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/circle_button"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:text="SEND"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/btcReceive"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/circle_button"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:text="RECEIVE"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/txContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TRANSACTION HISTORY"
+            android:textSize="14pt"
+            android:textColor="@android:color/holo_green_light"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+</LinearLayout>

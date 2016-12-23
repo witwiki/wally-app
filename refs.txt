@@ -1,0 +1,7 @@
+REFERENCES
+
+http://www.viralandroid.com/2016/01/circular-button-with-icon-and-text-in-android.html
+
+http://codereview.stackexchange.com/questions/43806/dividing-the-screen-in-two-halves-using-linearlayout
+
+https://www.simplifiedcoding.net/android-qr-code-scanner-tutorial/ ---> Creating a BarScanner Intent
