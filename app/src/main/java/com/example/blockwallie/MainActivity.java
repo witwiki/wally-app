@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.view.View.OnClickListener;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
@@ -14,7 +15,7 @@ import com.google.zxing.integration.android.IntentResult;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     //View Objects
     private Button sendBtc, getBtc;
@@ -36,8 +37,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Initializing scan object
         qrScan = new IntentIntegrator(this);
 
-        // Attaching onclick listener
-        sendBtc.setOnClickListener(this);
+        // Set a click listener on that View
+        sendBtc.setOnClickListener(new OnClickListener() {
+            // The code in this method will be executed when the numbers category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Initiating the qr code scan
+                qrScan.initiateScan();
+            }
+        });
+
+        // Set a click listener on that View
+        getBtc.setOnClickListener(new OnClickListener() {
+            // The code in this method will be executed when the numbers category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link NumbersActivity}
+                Intent getBtcIntent = new Intent(MainActivity.this, ReceiveActivity.class);
+
+                // Start the new activity
+                startActivity(getBtcIntent);
+            }
+        });
+
     }
 
     //Getting the scan results
@@ -71,13 +93,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             super.onActivityResult(requestCode, resultCode, data);
         }
     }
-
-    @Override
-    public void onClick(View view){
-        // Initiating the qr code scan
-        qrScan.initiateScan();
-    }
-
 
 
 }

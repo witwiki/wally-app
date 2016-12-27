@@ -30,7 +30,10 @@ dependencies {
     // THIRD-PARTY DEPENDENCIES
     // BarCode Scanner dependency (JourneyApps)
     compile 'com.journeyapps:zxing-android-embedded:3.4.0'
-    // BitPay API for BTC transactions on Android
-    //compile 'com.bitpay:android-sdk:1.0.0@aar'
 
+    // Coinbase API for Bitcoin Payments
+    //compile 'com.coinbase.android:coinbase-android-sdk:1.0.1'
+
+    // QR Code generator using ZXing
+    compile 'com.google.zxing:core:3.2.1'
 }
